@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head><title>Detection Results</title></head>
+<body>
+  <h2>Processed Video for Location: {{ location }}</h2>
+  <video width="640" height="480" controls>
+    <source src="{{ url_for('processed', filename=video_path.split('/')[-1]) }}" type="video/mp4">
+  </video>
+</body>
+</html>

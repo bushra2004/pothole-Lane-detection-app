@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Car with Pothole and Lane Detection</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            position: relative;
+            background: url('/static/images/car1.jpg') no-repeat center center/cover;
+            background-attachment: fixed;
+            color: white;
+        }
+
+        /* Navbar */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: #ff4c4c;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 400;
+            font-size: 18px;
+        }
+
+        nav ul li a.active {
+            border-bottom: 2px solid red;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 115%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            position: relative;
+            max-width: 800px;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .abstract {
+            font-size: 18px;
+            font-weight: 400;
+            color: #ff4c4c;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .abstract:hover {
+            text-decoration: underline;
+        }
+
+        /* Abstract Section */
+        #abstract-section {
+            width: 100%;
+            margin: 50px auto;
+            background: white;
+            color: black;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: justify;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        #abstract-section h2 {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #ff4c4c;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">AI Car using Deep Learning</div>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="/pothole">Pothole</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="content">
+            <h1>AI CAR WITH REAL-TIME DETECTION OF DAMAGED ROADS & LANE DETECTION</h1>
+            <p class="abstract" onclick="scrollToAbstract()">⬆️</p>
+        </div>
+    </section>
+
+    <!-- Abstract Section -->
+    <section id="abstract-section">
+        <h2>Abstract</h2>
+        <p>
+            Road safety and infrastructure maintenance are crucial for modern transportation. Accurate lane detection enhances autonomous driving, while identifying road damage enables timely repairs. Traditional inspections are inefficient, and existing methods struggle in adverse conditions. This project develops an automated system that processes uploaded road videos to detect lanes and road damage efficiently, improving safety and maintenance efforts.
+        </p>
+        <center>
+        <a href="https://github.com/joshwadd/Lane-Line-Identification/blob/master/README.md" target="_blank">
+            <button>Learn More</button>
+          </a>
+        </center>
+    </section>
+
+    <script>
+        function scrollToAbstract() {
+            document.getElementById('abstract-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+
+</body>
+</html>
